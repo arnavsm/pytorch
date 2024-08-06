@@ -65,9 +65,12 @@ for batch_size in batch_sizes:
             dataset=train_dataset, batch_size=batch_size, shuffle=True
         )
         optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=0.0)
+        # -------------------------------------------------------------------------
         writer = SummaryWriter(
             f"runs/MNIST/MiniBatchSize {batch_size} LR {learning_rate}"
         )
+        # -------------------------------------------------------------------------
+
 
         # Visualize model in TensorBoard
         images, _ = next(iter(train_loader))
@@ -103,6 +106,7 @@ for batch_size in batch_sizes:
 
                 # Plot things to tensorboard
                 class_labels = [classes[label] for label in predictions]
+                # -------------------------------------------------------------------------
                 writer.add_image("mnist_images", img_grid)
                 writer.add_histogram("fc1", model.fc1.weight)
                 writer.add_scalar("Training loss", loss, global_step=step)
@@ -126,3 +130,5 @@ for batch_size in batch_sizes:
                     "loss": sum(losses) / len(losses),
                 },
             )
+            # -------------------------------------------------------------------------
+

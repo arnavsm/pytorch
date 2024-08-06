@@ -10,7 +10,7 @@ train_set = datasets.CIFAR10(
 )
 train_loader = DataLoader(dataset=train_set, batch_size=64, shuffle=True)
 
-
+# -------------------------------------------------------------------------
 def get_mean_std(loader):
     # var[X] = E[X**2] - E[X]**2
     channels_sum, channels_sqrd_sum, num_batches = 0, 0, 0
@@ -24,7 +24,7 @@ def get_mean_std(loader):
     std = (channels_sqrd_sum / num_batches - mean**2) ** 0.5
 
     return mean, std
-
+# -------------------------------------------------------------------------
 
 mean, std = get_mean_std(train_loader)
 print(mean)

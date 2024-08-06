@@ -34,6 +34,7 @@ class CNN(nn.Module):
 
         return x
 
+# -------------------------------------------------------------------------
     def initialize_weights(self):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
@@ -49,7 +50,7 @@ class CNN(nn.Module):
             elif isinstance(m, nn.Linear):
                 nn.init.kaiming_uniform_(m.weight)
                 nn.init.constant_(m.bias, 0)
-
+# -------------------------------------------------------------------------
 
 if __name__ == "__main__":
     model = CNN(in_channels=3, num_classes=10)

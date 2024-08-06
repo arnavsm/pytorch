@@ -19,6 +19,7 @@ learning_rate = 1e-3
 batch_size = 1024
 num_epochs = 5
 
+# -------------------------------------------------------------------------
 # Load pretrain model & modify it
 model = torchvision.models.vgg16(weights="DEFAULT")
 
@@ -32,6 +33,7 @@ model.avgpool = nn.Identity()
 model.classifier = nn.Sequential(
     nn.Linear(512, 100), nn.ReLU(), nn.Linear(100, num_classes)
 )
+# -------------------------------------------------------------------------
 model.to(device)
 
 

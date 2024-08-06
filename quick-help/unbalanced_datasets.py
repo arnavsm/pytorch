@@ -17,7 +17,7 @@ def get_loader(root_dir, batch_size):
             transforms.ToTensor(),
         ]
     )
-
+# -------------------------------------------------------------------------
     dataset = datasets.ImageFolder(root=root_dir, transform=my_transforms)
     subdirectories = dataset.classes
     class_weights = []
@@ -40,7 +40,7 @@ def get_loader(root_dir, batch_size):
 
     loader = DataLoader(dataset, batch_size=batch_size, sampler=sampler)
     return loader
-
+# -------------------------------------------------------------------------
 
 def main():
     loader = get_loader(root_dir="dataset", batch_size=8)
