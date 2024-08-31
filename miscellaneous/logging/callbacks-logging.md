@@ -1,5 +1,5 @@
 # Monitoring Model Training in PyTorch with Callbacks and Logging - GeeksforGeeks
-Last Updated : 04 Jun, 2024
+[Link to Article](https://www.geeksforgeeks.org/monitoring-model-training-in-pytorch-with-callbacks-and-logging/)
 
 Monitoring model training is crucial for understanding the performance and behavior of your machine learning models. PyTorch provides several mechanisms to facilitate this, including the use of callbacks and logging. This article will guide you through the process of using these tools effectively.
 
