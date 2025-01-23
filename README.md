@@ -1,3 +1,3 @@
-# pytorch 101
+# pytorch
 my resources and experiments with pytorch, coming soon:
 - pytorch for research
