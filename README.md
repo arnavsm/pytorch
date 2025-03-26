@@ -1,3 +1,2 @@
 # pytorch
-my resources and experiments with pytorch, coming soon:
-- pytorch for research
+my resources and experiments with pytorch, docs [here](https://pytorch.org/docs/stable/index.html)
